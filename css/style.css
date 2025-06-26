@@ -1,0 +1,69 @@
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  background-color: #333; /* Latar belakang body lebih gelap */
+  color: #f0f0f0; /* Teks body lebih terang untuk kontras */
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #444; /* Latar belakang tabel lebih gelap */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Bayangan sedikit lebih gelap */
+}
+
+th,
+td {
+  border: 1px solid #555; /* Border sel lebih gelap */
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #222; /* Warna latar belakang header lebih gelap */
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #555; /* Warna latar belakang baris genap lebih gelap */
+}
+
+tr:hover {
+  background-color: #666; /* Warna latar belakang hover lebih gelap */
+}
+
+thead th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #222;
+  color: white;
+}
+
+/* Styling khusus untuk border bawah baris terakhir jika diperlukan */
+
+a {
+  color: #80c1ff; /* Warna link sedikit berbeda */
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Styling untuk tombol Tambah Data */
+a[href="tambah.php"] {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #0056b3; /* Warna tombol sedikit lebih gelap */
+  color: white;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+a[href="tambah.php"]:hover {
+  background-color: #003d80; /* Efek hover tombol lebih gelap */
+  text-decoration: none;
+}
