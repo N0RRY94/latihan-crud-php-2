@@ -1,12 +1,35 @@
 <?php
 require 'source/source.php';
+
+$query = mysqli_query($conn, "SELECT * FROM test_pho"); //tampilkan dulu semua table databasenya
+
+// saring datanya apabila menekan tombol pencarian
+if (isset($_POST["btn-search"])) {
+    $search = $_POST["search"];
+
+    // perhatikan $query pastikan sama dengan $query yang pertama nama var nya
+    $query = mysqli_query($conn, "SELECT * FROM test_pho WHERE nama LIKE '%$search%' OR 
+                                        email = '$search' OR
+                                        phone = '$search'
+                                        ");
+
+    var_dump($search);
+};
+
+// aksi hapus data
 if (isset($_GET["hapus_id"])) {
     $hapus_id = $_GET["hapus_id"];
     mysqli_query($conn, "DELETE FROM test_pho
 WHERE
-    id = $hapus_id -- Bagian ini ADALAH KEHARUSAN MUTLAK!");
+    id = $hapus_id");
 };
 
+
+// control variable query yang di eksekusi
+$rows = [];
+while ($tables = mysqli_fetch_assoc($query)) {
+    $rows[] = $tables;
+}
 
 ?>
 <!DOCTYPE html>
@@ -20,6 +43,11 @@ WHERE
 </head>
 
 <body>
+    <form method="POST" action="">
+        <input type="text" name="search" placeholder="Cari nama/email/phone">
+        <button type="submit" name="btn-search">Cari</button>
+    </form>
+
     <table border="1" cellpadding="8" cellspacing="0">
         <thead>
             <tr>

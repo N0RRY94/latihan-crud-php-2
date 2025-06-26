@@ -6,15 +6,10 @@
 $conn = mysqli_connect("localhost", "root", "", "belajarphp");
 
 // Menjalankan query SQL untuk mengambil semua data dari tabel "test_pho"
-$query = mysqli_query($conn, "SELECT * FROM test_pho");
+
 
 // Membuat array kosong untuk menampung hasil query
-$rows = [];
 
-// Melakukan iterasi pada setiap baris hasil query dan memasukkannya ke dalam array $rows
-while ($tables = mysqli_fetch_assoc($query)) {
-    $rows[] = $tables;
-}
 
 // ===================source untuk tambah.php ===============================//
 

@@ -40,7 +40,7 @@ var_dump($id);
         <label for="phone">Phone:</label><br>
         <input type="text" id="phone" name="phone" required><br><br>
 
-        <button type="submit">Ubahanjing</button>
+        <button type="submit">ubah</button>
     </form>
 
     <a href="index.php" style="display: inline-block; padding: 8px 16px; background: #3498db; color: #fff; text-decoration: none; border-radius: 4px; margin-top: 20px;">Home</a>

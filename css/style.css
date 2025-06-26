@@ -67,3 +67,44 @@ a[href="tambah.php"]:hover {
   background-color: #003d80; /* Efek hover tombol lebih gelap */
   text-decoration: none;
 }
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 32px auto 18px auto;
+  gap: 10px;
+}
+
+input[type="text"][name="search"] {
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: none;
+  background: #23272b;
+  color: #eeeeee;
+  font-size: 1em;
+  width: 260px;
+  transition: background 0.2s, border 0.2s;
+}
+
+input[type="text"][name="search"]:focus {
+  outline: none;
+  background: #31363b;
+  border: 1px solid #00adb5;
+}
+
+button[type="submit"] {
+  background: #00adb5;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+button[type="submit"]:hover {
+  background: #007b80;
+}
